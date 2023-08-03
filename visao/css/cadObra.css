@@ -1,0 +1,50 @@
+#cad{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form_cad{
+  border-radius: 27px;
+  background-color: white;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form_cad table{
+  padding: 10px;
+}
+
+#form_cad h1{
+  text-transform: uppercase;
+  font-size: 20pt;
+  color: #502D73;
+}
+
+.txtCad{
+  background-color: #E8E5E5;
+  border-radius: 17px;
+  padding: 10px;
+  margin: 4px;
+}
+
+select{
+  background-color: rgb(204, 200, 199);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#imgUp{
+  cursor: pointer;
+  width: 85px;
+}
+
+#imagem{
+  display: flex;
+  flex-direction: column;
+}

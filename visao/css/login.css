@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('../fonts/Nunito/static/Nunito-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+*{
+font-family: 'Nunito-Black';
+    margin: 0; 
+    padding: 0; 
+    font-size: 100%; 
+}
+
+      
+body{
+    background-color: #502D73;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    padding: 5px;
+}
+
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formLogin{
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 8px;
+    width: 448px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.txtCad{
+    width: 250px;
+    margin-top: 12.5pt;
+    border-width: 0px 0px 1px 0px;
+    border-bottom-color: #502D73;
+    border-style: dotted;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#btnEntrar{
+    color: #502D73;
+	text-decoration-line: none;
+	background-color: white;  
+	font-size: 12pt;
+	border: 1px solid #502D73;
+	padding: 10px 20px; 
+    cursor: pointer;
+}
+
+#btnEntrar:hover{
+    transition: 0.5s ;
+	color: white;
+	background-color: #502D73;
+	border: 1px solid white;
+}
+
+
+#btnCad{
+    color: #502D73;
+	text-decoration-line: none; 
+	font-size: 9pt;
+}
+
+
+#btnCad:hover{
+    transition: 0.5s ;
+	color: black;
+	background-color: transparent;
+}

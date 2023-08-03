@@ -1,0 +1,49 @@
+#aside_cabecalho{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#divBusca{
+  background-color: white;
+  border:solid 1px;
+  border-radius:15px;
+  height: 30px;
+  width:300px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  
+}
+
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:15px;
+  font-size:15px;
+  border:none;
+  height:22px;
+  width: 240px;
+  
+}
+
+#btnBusca{
+  all: unset;
+  cursor: pointer;
+  outline: revert;
+}
+
+#divBusca img{
+  width: 20px;
+  height: 20px;
+}
+
+#explorar{
+  position: relative;
+  padding-right: 5px;
+  padding-top: 10px;
+}

@@ -1,0 +1,77 @@
+#cad{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form_cad{
+  border-radius: 27px;
+  background-color: white;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form_cad h1{
+  text-transform: uppercase;
+  margin-top: 12.5px;
+  font-size: 20pt;
+}
+
+#form_cad form{
+  width: min-content;
+  margin-top: 12.5px;
+  margin-bottom: 25px;
+
+}
+
+#termoCad{
+  margin: 10px;
+}
+
+#termoLink{
+  font-size: small;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#imgUp{
+  cursor: pointer;
+  width: 85px;
+}
+
+#imagem{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+@media (max-width: 600px){
+  #form_cad {
+    width: 100%;
+    height: 100%;
+  }
+
+  #position_title{
+    position: relative;
+    width: auto;
+    padding-right: 10px;
+  }
+
+  #header{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #header, #cad{
+    min-width: 420px;
+  }
+
+}
+
+
