@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    container_name: civitas_web
+    build:
+      context: web
+    networks:
+      - civitas-network
+    volumes:
+      - ../:/var/www/html/
+    ports:
+      - 8080:80
+
+  db:
+    container_name: civitas_db
+    build:
+      context: db
+    networks:
+      - civitas-network
+    ports:
+      - 6000:3306
+
+networks:
+  civitas-network:
+    driver: bridge 
