@@ -3,9 +3,9 @@
     // Inserção no banco de dados
 
     function cadastrarObra($conexao, $nome, $autor, $tipoobra, $genero){
-        $insertObra = "INSERT INTO produtocultural "
-            . "(titulo, autor, idTipo, idGenero, sugestao) VALUES "
-            . "('$nome', '$autor', '$tipoobra', '$genero', 0 )";
+        $insertObra = "INSERT INTO produtoCultural "
+            . "(titulo, autor, descricao, capa, idTipo, idGenero, sugestao) VALUES "
+            . "('$nome', '$autor', '', '', '$tipoobra', '$genero', 0 )";
 
         mysqli_query($conexao,$insertObra) or die ( mysqli_error($conexao) );
         $idProduto = mysqli_insert_id($conexao); //Retorna o id do produto cadastrado
@@ -27,7 +27,7 @@
         $arqAberto = fopen ( $imgCapa["tmp_name"], "r" );
         $capaBin = addslashes( fread ( $arqAberto , $tamanhoImg ) );
 
-        $insertObra = "INSERT INTO produtocultural "
+        $insertObra = "INSERT INTO produtoCultural "
             . "(titulo, descricao, autor, idTipo, idGenero, capa, sugestao) VALUES "
             . "('$nome', '$descricao', '$autor', '$tipoobra', '$genero', '$capaBin', 1 )";
 
@@ -45,7 +45,7 @@
     }
 
     function exibirObrasSugeridas ($conexao){
-        $sql = "SELECT * FROM produtocultural WHERE "
+        $sql = "SELECT * FROM produtoCultural WHERE "
             . "sugestao = 0";
 
         $resultado = mysqli_query($conexao,$sql ) or die ( mysqli_error($conexao) );
@@ -54,7 +54,7 @@
     }
 
     function exibirObrasAprovadas ($conexao){
-        $sql = "SELECT * FROM produtocultural WHERE "
+        $sql = "SELECT * FROM produtoCultural WHERE "
             . "sugestao = 1";
 
         $resultado = mysqli_query($conexao,$sql ) or die ( mysqli_error($conexao) );
@@ -62,7 +62,7 @@
     }
 
     function exibirObrasAprovadasPorAdicao ($conexao){
-        $sql = "SELECT * FROM produtocultural WHERE "
+        $sql = "SELECT * FROM produtoCultural WHERE "
             . "sugestao = 1 "
             ."ORDER BY idproduto DESC";
 
@@ -71,7 +71,7 @@
     }
 
     function exibirObrasAprovadasPorTipo ($conexao, $idTipo){
-        $sql = "SELECT * FROM produtocultural WHERE "
+        $sql = "SELECT * FROM produtoCultural WHERE "
             . "sugestao = 1 AND idTipo=$idTipo "
             ."ORDER BY idproduto DESC";
 
@@ -80,7 +80,7 @@
     }
 
     function pesquisarObras ($conexao, $txtPesq){
-        $sql = "SELECT * FROM produtocultural WHERE "
+        $sql = "SELECT * FROM produtoCultural WHERE "
             . "titulo LIKE '$txtPesq%' AND sugestao = 1 ";
 
         $sql = $sql . "ORDER BY titulo";
@@ -101,7 +101,7 @@
         require_once 'publicacaoDAO.php';
         excluirPubliPorIDProduto($conexao, $id);
 
-        $deleteProduto = "DELETE FROM produtocultural WHERE idProduto = $id";
+        $deleteProduto = "DELETE FROM produtoCultural WHERE idProduto = $id";
         mysqli_query($conexao,$deleteProduto ) or die ( mysqli_error($conexao) );
     }
 
@@ -111,7 +111,7 @@
         $arqAberto = fopen ( $capa["tmp_name"], "r" );
         $capaBin = addslashes( fread ( $arqAberto , $tamanhoImg ) );
 
-        $update = "UPDATE produtocultural SET titulo='$nome', autor='$autor', descricao='$descricao', idTipo=$tipoobra, idGenero=$genero, capa='$capaBin', sugestao=1 WHERE idproduto=$id";
+        $update = "UPDATE produtoCultural SET titulo='$nome', autor='$autor', descricao='$descricao', idTipo=$tipoobra, idGenero=$genero, capa='$capaBin', sugestao=1 WHERE idproduto=$id";
 
         mysqli_query($conexao,$update) or die ( mysqli_error($conexao) );
         require_once 'livrosDAO.php';
@@ -128,7 +128,7 @@
 
     function alterarObrasSemImg($conexao, $id, $nome, $autor, $descricao, $tipoOriginal, $tipoobra, $genero){
 
-        $update = "UPDATE produtocultural SET titulo='$nome', autor='$autor', descricao='$descricao', idTipo=$tipoobra, idGenero=$genero, sugestao=1 WHERE idproduto=$id";
+        $update = "UPDATE produtoCultural SET titulo='$nome', autor='$autor', descricao='$descricao', idTipo=$tipoobra, idGenero=$genero, sugestao=1 WHERE idproduto=$id";
 
         mysqli_query($conexao,$update) or die ( mysqli_error($conexao) );
         require_once 'livrosDAO.php';
@@ -144,7 +144,7 @@
     }
 
     function pesquisarObraPorID($conexao, $id) {
-        $sql = "SELECT * FROM produtocultural WHERE idproduto = $id";
+        $sql = "SELECT * FROM produtoCultural WHERE idproduto = $id";
                         
         $resultado = mysqli_query($conexao,$sql ) or die ( mysqli_error($conexao) );
         return $resultado;

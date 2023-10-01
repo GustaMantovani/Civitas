@@ -1,7 +1,7 @@
 <?php
 
 function comboGenero($conexao, $generoMarcado){ //Função de acesso à tabela 'genero'
-    $selectGenero = "SELECT * FROM generoproduto";
+    $selectGenero = "SELECT * FROM generoProduto";
     
     $acesso = mysqli_query($conexao, $selectGenero) or die (mysqli_error($conexao));
 
@@ -23,7 +23,7 @@ function comboGenero($conexao, $generoMarcado){ //Função de acesso à tabela '
 }
 
 function pesquisarGeneroPorID ($conexao, $idGenero){
-    $sql = "SELECT * FROM generoproduto WHERE idgeneroProduto = $idGenero";
+    $sql = "SELECT * FROM generoProduto WHERE idgeneroProduto = $idGenero";
                         
     $resultado = mysqli_query($conexao,$sql) or die ( mysqli_error($conexao) );
     return $resultado;
