@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,41 +13,41 @@
     <link rel="stylesheet" href="css/mainHeader.css">
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
     <style>
-        #tabelaObras{
-            text-align: justify;
-        }
+    #tabelaObras {
+        text-align: justify;
+    }
 
-        #tabelaObras td{
-            padding: 5px;
-        }
+    #tabelaObras td {
+        padding: 5px;
+    }
 
-        #menuObras{
-            width: 150px;
-        }
+    #menuObras {
+        width: 150px;
+    }
 
-        #aside_cabecalho{
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            margin-right: 15px;
-        }
-
-        
+    #aside_cabecalho {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-right: 15px;
+    }
     </style>
     <title>Civitas</title>
 </head>
+
 <body>
 
     <header id="header">
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div> 
+        </div>
 
 
         <di></di>
 
         <aside id="aside_cabecalho">
-            <a style="margin-right: 2px;" href="../visao/formAlterarObras.php?tipoAlteracao=2"><img width="20px" src="img/cadObra.png"></a>
+            <a style="margin-right: 2px;" href="../visao/formAlterarObras.php?tipoAlteracao=2"><img width="20px"
+                    src="img/cadObra.png"></a>
             <a href="admin.php"><img src="img/icone-globe-violet.png" width="25px"></a>
         </aside>
     </header>
@@ -119,8 +120,6 @@
             ?>
     </section>
 
- </body>
- 
-</html>
+</body>
 
-    
+</html>

@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +16,13 @@
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
     <title>Civitas</title>
 </head>
+
 <body>
     <header id="header">
-        
+
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div>  
+        </div>
 
         <div style="position: relative;">
             <?php
@@ -28,17 +30,18 @@
             ?>
         </div>
 
-        <aside id="aside_cabecalho"> 
+        <aside id="aside_cabecalho">
 
             <div id="explorar">
                 <a href="lista.php" alt="livros com interesse"><img src="img/livros.png" width="16.5px"></a>
-            </div>  
+            </div>
 
             <form action="pesquisa.php">
-                
+
                 <div id="divBusca">
-                    <input type="text" id="txtBusca" name="txtpesq" placeholder="PESQUISA" class="espacamento"/>
-                    <button id="btnBusca" type="submit" ><img src="img/search1.png"  alt="Buscar" class="espacamento"/></button>    
+                    <input type="text" id="txtBusca" name="txtpesq" placeholder="PESQUISA" class="espacamento" />
+                    <button id="btnBusca" type="submit"><img src="img/search1.png" alt="Buscar"
+                            class="espacamento" /></button>
                 </div>
             </form>
         </aside>
@@ -48,7 +51,9 @@
     <section id="obras">
         <div>
             <div id="topo">
-                <a href="explorar.php" id="tituloExplorar"><H2 >Explore</H2></a>
+                <a href="explorar.php" id="tituloExplorar">
+                    <H2>Explore</H2>
+                </a>
                 <a href="formObra.php"><button class="btn" style="font-size: 10pt;">Sugerir uma Obra</button></a>
             </div>
             <hr style="margin-top: 5px; margin-bottom: 5px; color: blueviolet;">
@@ -146,4 +151,5 @@
     </section>
 
 </body>
+
 </html>

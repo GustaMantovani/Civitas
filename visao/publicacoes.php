@@ -5,6 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,15 +18,16 @@
     <title>Civitas</title>
 
     <style>
-        
+
     </style>
 </head>
+
 <body>
     <header id="header">
-        
+
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div>  
+        </div>
 
         <di></di>
 
@@ -76,9 +78,11 @@
 
             ?>
         </div>
-            <div id="comunidade">
-                <div style="display: flex; justify-content: center; align-items: center;"><h2 style="margin-left: 30px; font-size: 16pt; margin-top: 20px;">Publicações:</h2></div>
-                <?php
+        <div id="comunidade">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <h2 style="margin-left: 30px; font-size: 16pt; margin-top: 20px;">Publicações:</h2>
+            </div>
+            <?php
                     require_once "../modelo/publicacaoDAO.php";
                     $pesqPubliAval = pesquisarPublicacaoPorIDUsr($conexao, $idUsr);
 
@@ -129,8 +133,9 @@
 
                     }
                 ?>
-            </div>
+        </div>
         </div>
     </section>
 </body>
+
 </html>

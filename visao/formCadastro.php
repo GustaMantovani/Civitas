@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,13 @@
     <script src="js/funcoes.js"></script>
     <title>Civitas</title>
 </head>
+
 <body>
     <header id="header">
-        
+
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div> 
+        </div>
 
     </header>
 
@@ -66,23 +68,28 @@
                 <table>
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <tr>
-                        <td><input class="txtCad" type="text" name="txtNome" size="40" placeholder=" Nome e Sobrenome" value="<?php echo $nome; ?>"></td>
+                        <td><input class="txtCad" type="text" name="txtNome" size="40" placeholder=" Nome e Sobrenome"
+                                value="<?php echo $nome; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td><input class="txtCad" type="text" name="txtUsuario" size="40"  placeholder=" Usuário" value="<?php echo $usuario; ?>"></td>
+                        <td><input class="txtCad" type="text" name="txtUsuario" size="40" placeholder=" Usuário"
+                                value="<?php echo $usuario; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td><input class="txtCad" type="text" name="txtEmail" size="40" placeholder=" Email" value="<?php echo $email; ?>"></td>
+                        <td><input class="txtCad" type="text" name="txtEmail" size="40" placeholder=" Email"
+                                value="<?php echo $email; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td><input class="txtCad" type="text" name="txtData" size="40" placeholder=" Data de Nascimento" value="<?php echo $dataNasc; ?>"></td>
+                        <td><input class="txtCad" type="text" name="txtData" size="40" placeholder=" Data de Nascimento"
+                                value="<?php echo $dataNasc; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td><input class="txtCad" type="<?php echo $typeCpf; ?>" name="txtCPF" size="40" placeholder=" CPF" value="<?php echo $cpf; ?>"></td>
+                        <td><input class="txtCad" type="<?php echo $typeCpf; ?>" name="txtCPF" size="40"
+                                placeholder=" CPF" value="<?php echo $cpf; ?>"></td>
                     </tr>
 
                     <tr>
@@ -90,7 +97,8 @@
                     </tr>
 
                     <tr>
-                        <td><input class="txtCad" type="password" name="txtSenha2" size="40" placeholder=" Confirmar Senha"></td>
+                        <td><input class="txtCad" type="password" name="txtSenha2" size="40"
+                                placeholder=" Confirmar Senha"></td>
                     </tr>
 
                     <tr>
@@ -101,14 +109,15 @@
                                 <img for="flImage" width="90px" src="$caminhoImg" id="imgUp">
                             html;
                             ?>
-                            <input type="file" name="imgPerfil" id="flImage" accept="image/*"><img id="imgFoto" name="imgFoto" src="">
+                            <input type="file" name="imgPerfil" id="flImage" accept="image/*"><img id="imgFoto"
+                                name="imgFoto" src="">
                             <script src="js/scripts.js"></script>
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            
+
                             <input id="termoCad" type="checkbox" name="cbTermo">
                             Eu li e concordo com os <a id="termoLink" href="termos.html">Termos de Uso e Serviço</a>
                         </td>
@@ -116,7 +125,7 @@
 
                     <tr>
                         <td><input class="btn" type="submit" name="btnEnviar" value="Cadastrar"></td>
-                        
+
                     </tr>
                 </table>
 
@@ -133,4 +142,5 @@
         </div>
     </section>
 </body>
+
 </html>

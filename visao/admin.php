@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,20 +15,21 @@
     <title>Civitas</title>
 
     <style>
-        #aside_cabecalho{
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            margin-right: 15px;
-        }
+    #aside_cabecalho {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        margin-right: 15px;
+    }
     </style>
 </head>
+
 <body>
 
     <header id="header">
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div> 
+        </div>
 
         <di></di>
 
@@ -48,8 +50,6 @@
         </a>
     </section>
 
- </body>
- 
-</html>
+</body>
 
-    
+</html>

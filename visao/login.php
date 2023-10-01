@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
     <title>Civitas</title>
 </head>
+
 <body>
     <header><img src="img/title.png" width="200px"></header>
     <section>
@@ -15,11 +17,11 @@
             <h2 style="font-size: 20pt;">Login</h2>
             <table>
                 <tr>
-                    <td><input class="txtCad" type="text"  name="txtLogin"  placeholder=" Usuário"></td>
+                    <td><input class="txtCad" type="text" name="txtLogin" placeholder=" Usuário"></td>
                 </tr>
 
                 <tr>
-                    <td><input class="txtCad" type="password" name="txtSenha"  placeholder=" Senha"></td>
+                    <td><input class="txtCad" type="password" name="txtSenha" placeholder=" Senha"></td>
                 </tr>
 
                 <tr>
@@ -44,4 +46,5 @@
 
     </section>
 </body>
+
 </html>

@@ -2,9 +2,10 @@
     require_once '../controlador/validarAdm.php';
 ?>
 
-<!DOCTYPE html> 
-<html lang="pt-br"> 
-<head> 
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +14,13 @@
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
     <title>Civitas</title>
 </head>
+
 <body>
     <header id="header">
-        
+
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div>  
+        </div>
 
     </header>
 
@@ -78,15 +80,18 @@
                 <input type="hidden" name="tipoOriginal" value="<?php echo $tipoOriginal; ?>">
                 <table>
                     <tr>
-                        <td><input class="txtCad" type="text" name="txtNomeObra" size="40" placeholder="Nome da Obra" value="<?php echo $nome; ?>"></td>
+                        <td><input class="txtCad" type="text" name="txtNomeObra" size="40" placeholder="Nome da Obra"
+                                value="<?php echo $nome; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td><input class="txtCad" type="text" name="txtAutor" size="40" placeholder=" Autor/Diretor" value="<?php echo $autor; ?>"></td>
+                        <td><input class="txtCad" type="text" name="txtAutor" size="40" placeholder=" Autor/Diretor"
+                                value="<?php echo $autor; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td><textarea  class="txtCad" name="txtDescricao" cols="30" rows="4" placeholder="Descrição" style="max-width:380px;"><?php echo $descricao; ?></textarea></td>
+                        <td><textarea class="txtCad" name="txtDescricao" cols="30" rows="4" placeholder="Descrição"
+                                style="max-width:380px;"><?php echo $descricao; ?></textarea></td>
                     </tr>
 
                     <tr>
@@ -134,11 +139,11 @@
                                 <img for="flImage" width="90px" src="$caminhoImg" id="imgUp">
                             html;
                             ?>
-                            <input type="file" name="capa" id="flImage" accept="image/*"><img id="imgFoto" name="imgFoto" src="">
+                            <input type="file" name="capa" id="flImage" accept="image/*"><img id="imgFoto"
+                                name="imgFoto" src="">
                             <script src="js/scripts.js"></script>
                         </td>
-                    </tr>                  
-                    
+                    </tr>
 
                     <tr>
                         <td><input class="btn" type="submit" name="btnEnviar" value=" SALVAR "></td>
@@ -157,4 +162,5 @@
 
     </section>
 </body>
+
 </html>

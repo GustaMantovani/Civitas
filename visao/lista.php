@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,12 +15,13 @@
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
     <title>Civitas</title>
 </head>
+
 <body>
     <header id="header">
-        
+
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div>  
+        </div>
 
         <div style="position: relative;">
             <?php
@@ -27,16 +29,17 @@
             ?>
         </div>
 
-        <aside id="aside_cabecalho"> 
+        <aside id="aside_cabecalho">
             <div id="explorar">
                 <a href="explorar.php"><img src="img/icone-globe-violet.png" width="25px"></a>
-            </div>  
+            </div>
 
             <form action="pesquisa.php">
-                
+
                 <div id="divBusca">
-                    <input type="text" id="txtBusca" name="txtpesq" placeholder="PESQUISA" class="espacamento"/>
-                    <button id="btnBusca" type="submit" ><img src="img/search1.png"  alt="Buscar" class="espacamento"/></button>    
+                    <input type="text" id="txtBusca" name="txtpesq" placeholder="PESQUISA" class="espacamento" />
+                    <button id="btnBusca" type="submit"><img src="img/search1.png" alt="Buscar"
+                            class="espacamento" /></button>
                 </div>
             </form>
         </aside>
@@ -101,8 +104,9 @@
                     ?>
                 </table>
             </div>
-        </form>            
+        </form>
     </section>
 
 </body>
+
 </html>

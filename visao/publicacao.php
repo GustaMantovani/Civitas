@@ -4,6 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +16,13 @@
     <script src="js/funcoes.js"></script>
     <title>Civitas</title>
 </head>
+
 <body>
     <header id="header">
-        
+
         <div id="position_title">
             <img src="img/title.png" alt="Civias" width="200px">
-        </div>  
+        </div>
 
         <div style="position: relative;">
             <?php
@@ -28,7 +30,7 @@
             ?>
         </div>
 
-        <aside id="aside_cabecalho"> 
+        <aside id="aside_cabecalho">
             <div id="explorar">
 
                 <?php
@@ -37,13 +39,15 @@
                         <a href='lista.php?idproduto=$idproduto&&coman=true'><img src='img/livros.png' width='16.5px'></a>
                     ";
                 ?>
-                <a href="explorar.php" alt="livros com interesse"><img src="img/icone-globe-violet.png" width="25px"></a>
-            </div>  
+                <a href="explorar.php" alt="livros com interesse"><img src="img/icone-globe-violet.png"
+                        width="25px"></a>
+            </div>
             <form action="pesquisa.php">
-                
+
                 <div id="divBusca">
-                    <input type="text" id="txtBusca" name="txtpesq" placeholder="PESQUISA" class="espacamento"/>
-                    <button id="btnBusca" type="submit" ><img src="img/search1.png"  alt="Buscar" class="espacamento"/></button>    
+                    <input type="text" id="txtBusca" name="txtpesq" placeholder="PESQUISA" class="espacamento" />
+                    <button id="btnBusca" type="submit"><img src="img/search1.png" alt="Buscar"
+                            class="espacamento" /></button>
                 </div>
             </form>
         </aside>
@@ -145,37 +149,38 @@
                 }
             ?>
         </div>
-        
+
         <h1 id="tituloComunidade">Comunidade</h1>
         <hr>
         <div id="painel">
             <div id="publicacoes">
                 <form id="formComem" autocomplete="off" action="../controlador/publicar.php" method="POST">
-                
+
 
                     <div id="headerForm">
-                        <input id="tema" type="text"  name="txtTemaPubli"  placeholder="Tema">
+                        <input id="tema" type="text" name="txtTemaPubli" placeholder="Tema">
                         <div id="avaliacao">
                             <a href="javascript:void(0)" onclick="Avaliar(1)">
                                 <img src="img/star0.png" id="s1"></a>
-                        
+
                             <a href="javascript:void(0)" onclick="Avaliar(2)">
                                 <img src="img/star0.png" id="s2"></a>
-                        
+
                             <a href="javascript:void(0)" onclick="Avaliar(3)">
                                 <img src="img/star0.png" id="s3"></a>
-                        
+
                             <a href="javascript:void(0)" onclick="Avaliar(4)">
                                 <img src="img/star0.png" id="s4"></a>
-                        
+
                             <a href="javascript:void(0)" onclick="Avaliar(5)">
                                 <img src="img/star0.png" id="s5"></a>
-                        </div> 
+                        </div>
                     </div>
                     <hr>
                     <div id="footerForm">
-                        <textarea id="txtComentario" name="txtComentario" style="resize: none" cols="30" rows="4" placeholder="Comentário"></textarea>
-                        <button id="btnComentar" type="submit" ><img src="img/send.png" alt="Comentar"></button>   
+                        <textarea id="txtComentario" name="txtComentario" style="resize: none" cols="30" rows="4"
+                            placeholder="Comentário"></textarea>
+                        <button id="btnComentar" type="submit"><img src="img/send.png" alt="Comentar"></button>
                     </div>
                     <input type="hidden" name="avaliacao" id="rating">
                     <input type="hidden" name="dataPubli" value=<?php echo date('Y-m-d'); ?>>
@@ -235,7 +240,7 @@
                     ?>
                 </div>
             </div>
-            
+
             <?php
                 $resultadoInteresseID = exibirInteressesPorIdObra ($conexao, $idproduto);
 
@@ -265,6 +270,7 @@
             ?>
         </div>
     </section>
-    
+
 </body>
+
 </html>
