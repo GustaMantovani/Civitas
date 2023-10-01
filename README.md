@@ -29,8 +29,3 @@ Civitas foi desenvolvido inteireamente com ferramentas gratuitas
 - PHP instalado (versão 8.1 ou superior)
 - Servidor HTTP Apache ou Nginx
 - Banco de dados MariaDB, Mysql (ou outro compatível com PHP)
-
-## Instalação
-1 - Clone este repositório e execute qualquer um dos scripts sql no diretório 'data'. O script 'civitasTabelas.sql' cria apenas as tabelas baseadas no modelo relacional do sistema; enquanto 'civitasData.sql' carrega já tem alguns dados cadastrados caso queira executar testes ou iniciar a aplicação com algum banco de obras mínimo.
-
-2 - Edite a função de conexão em '/modelo/conexaoBD.php'
