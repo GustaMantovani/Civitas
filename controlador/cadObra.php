@@ -10,11 +10,11 @@ $genero = $_POST["cbGenero"];
 
 require_once '../modelo/conexaoBD.php';
 
-$conexao = conectarBD(); //Chama a conexão com o banco de dados
    
 $msgErro= ValidarCamposObras($nome, $autor, $tipoobra, $genero); //Verifica se os campos não estão vazios
 
 require_once '../modelo/obrasDAO.php';
+$conexao = conectarBD(); //Chama a conexão com o banco de dados
 
 if (empty($msgErro)){ //Insere a obra no banco de dados
     $msgErro = cadastrarObra($conexao, $nome, $autor, $tipoobra, $genero);
@@ -24,7 +24,4 @@ if (empty($msgErro)){ //Insere a obra no banco de dados
 else {
     header("Location:../visao/formObra.php?msg=$msgErro");
 }
-
-
-
 ?>
