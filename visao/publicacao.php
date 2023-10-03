@@ -98,7 +98,7 @@
                     echo "<div id='conteudo'>
                     <div id='apresentacao'>
                         <div id='divCapa'> 
-                            <img id='capa' src='data:image/jpeg;base64,$capa'>
+                            <a href=data:image/jpeg;base64,$capa><img id='capa' src='data:image/jpeg;base64,$capa'></a>
                         </div>
                         <div id='infos'>
                             <div style='display: flex; flex-direction: row;'>
