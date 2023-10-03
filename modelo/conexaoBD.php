@@ -2,10 +2,10 @@
 //Conexão com o banco de dados
 function conectarBD(){
     // Dados de conexão com o banco de dados
-    $servername = "endereco_do_servidor_de_banco_de_dados"; // Endereço do servidor do banco de dados
-    $username = "seu_usuario"; // Nome de usuário do banco de dados
-    $password = "sua_senha";   // Senha do banco de dados
-    $dbname = "seu_banco_de_dados"; // Nome do banco de dados que você deseja conectar
+    $servername = "DB_IP:3306"; // Endereço do servidor do banco de dados
+    $username = "root"; // Nome de usuário do banco de dados
+    $password = "rpsswd";   // Senha do banco de dados
+    $dbname = "civitas"; // Nome do banco de dados que você deseja conectar
     // Estabelecer a conexão com o banco de dados
     $conexao = mysqli_connect($servername, $username, $password, $dbname);
     //Setando padrão de codificação utf8
