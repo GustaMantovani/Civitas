@@ -1,4 +1,5 @@
 <?php
+    require_once '../controlador/validarAdm.php';
     require_once '../modelo/conexaoBD.php';
     require_once '../modelo/obrasDAO.php';
     

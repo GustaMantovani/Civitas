@@ -1,4 +1,5 @@
 <?php
+    require_once '../controlador/validar.php';
     require_once '../controlador/trocaLivro.php';
 
     // ADICIONAR

@@ -1,4 +1,5 @@
 <?php
+    require_once '../controlador/validar.php';
     require_once "../modelo/conexaoBD.php";
     require_once "../modelo/interesseDAO.php";
 
