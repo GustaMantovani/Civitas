@@ -60,5 +60,12 @@
         return $acesso;     
     }
 
+    function obterIdUsrInteresse($conexao,$idInteresse){
+        $sql = "SELECT Usuario_idusuario FROM interesse WHERE $idInteresse = idInteresse";
+        $acesso = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
+        $resultado = mysqli_fetch_assoc($acesso);
+        return $resultado['Usuario_idusuario']; 
+    }
+
 
 ?>

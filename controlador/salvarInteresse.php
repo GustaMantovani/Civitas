@@ -4,6 +4,8 @@
     require_once "../modelo/interesseDAO.php";
     require_once "../controlador/trocaLivro.php";
 
+    $lista = $_SESSION["lista"];
+
     $conexao = conectarBD();
 
     foreach ( $lista as $idLivro => $livro ) {
