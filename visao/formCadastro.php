@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/cadUsr.css">
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
-    <script src="js/funcoes.js"></script>
+    <script src="js/rating.js"></script>
     <title>Civitas</title>
 </head>
 
@@ -111,7 +111,7 @@
                             ?>
                             <input type="file" name="imgPerfil" id="flImage" accept="image/*"><img id="imgFoto"
                                 name="imgFoto" src="">
-                            <script src="js/scripts.js"></script>
+                            <script src="js/img_up_preview.js"></script>
                         </td>
                     </tr>
 

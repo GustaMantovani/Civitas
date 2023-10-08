@@ -141,7 +141,7 @@
                             ?>
                             <input type="file" name="capa" id="flImage" accept="image/*"><img id="imgFoto"
                                 name="imgFoto" src="">
-                            <script src="js/scripts.js"></script>
+                            <script src="js/img_up_preview.js"></script>
                         </td>
                     </tr>
 

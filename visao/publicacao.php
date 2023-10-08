@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/mainHeader.css">
     <link rel="stylesheet" href="css/publicacao.css">
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
-    <script src="js/funcoes.js"></script>
+    <script src="js/rating.js"></script>
     <title>Civitas</title>
 </head>
 
