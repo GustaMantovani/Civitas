@@ -19,6 +19,7 @@ Manifestações artísticas são partes integrantes das sociedades humanas e, po
 Civitas foi desenvolvido inteireamente com ferramentas gratuitas
 - [VsCode](https://code.visualstudio.com/)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
+- [Docker](https://www.docker.com/)
 - [XAMPP](https://www.apachefriends.org/pt_br/index.html)
 - [Figma](https://www.figma.com/)
 - [Canva](https://www.canva.com/pt_br/)
