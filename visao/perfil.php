@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/perfil.css">
     <link rel="stylesheet" href="css/lista.css">
     <link rel="shortcut icon" href="img/icons/owl-ico.ico" type="image/x-icon">
+    <script src="js/exclude_confirm.js"></script>
     <title>Civitas</title>
 </head>
 
@@ -87,16 +88,25 @@
 
                         echo "<div id='editar'> 
                             <a href='../visao/formCadastro.php?id=$idLogado'><button><img width='16px' src='img/edit.png'></button></a>
-                            <a href='../controlador/excluirUsr.php?id=$idUsr'><button><img width='15px' src='img/fechada.png'></button></a>
+                            <a href='#' onclick='confirmarExclusao($idUsr)'><button><img width='15px' src='img/fechada.png'></button></a>
                             <a href  ='../controlador/logout.php'><img width='16px' style='padding-top: 1.5px;' heigth=17px src = 'img/sair.png'></a>
                         </div>";
                     }
 
 
                 echo "</div>";
-
-
             ?>
+            <script>
+            function confirmarExclusao(idUsuario) {
+              var resposta = confirm("Tem certeza que deseja excluir este usuário?");
+
+              if (resposta) {
+                window.location.href = "../controlador/excluirUsr.php?id=" + idUsuario;
+              } else {
+                return false;
+              }
+            }
+            </script>
         </div>
 
         <div id="social">
@@ -200,6 +210,20 @@
 
                     }
                 ?>
+                <script>
+                    document.getElementById('').addEventListener('click', function() {
+                      // Pede confirmação ao usuário
+                      var confirmacao = confirm('Você tem certeza que deseja enviar o formulário?');
+
+                      // Se o usuário confirmar, envia o formulário
+                      if (confirmacao) {
+                        document.getElementById('meuFormulario').submit();
+                      } else {
+                        // Caso contrário, você pode adicionar alguma lógica aqui ou simplesmente não fazer nada
+                        console.log('Envio cancelado pelo usuário.');
+                      }
+                    });
+                </script>
             </div>
         </div>
     </section>
