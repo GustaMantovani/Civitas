@@ -94,11 +94,21 @@
                     }else{
                         $mediaAval = "";
                     }
+                    if($idTipo==1){
+                        $isbn = buscarISBNLivroPorNome($nome);
+                        if(isset($isbn)){
+                            $link = "../visao/google_books_view.php?isbn=$isbn&&idproduto=$idproduto";
+                        }else{
+                            
+                        }
+                    }else{
+                        $link = "data:image/jpeg;base64,$capa";
+                    }
                     
                     echo "<div id='conteudo'>
                     <div id='apresentacao'>
                         <div id='divCapa'> 
-                            <a href=data:image/jpeg;base64,$capa><img id='capa' src='data:image/jpeg;base64,$capa'></a>
+                            <a href=$link><img id='capa' src='data:image/jpeg;base64,$capa'></a>
                         </div>
                         <div id='infos'>
                             <div style='display: flex; flex-direction: row;'>

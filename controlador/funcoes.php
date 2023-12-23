@@ -257,4 +257,22 @@
 
         return $resposta;
     }
+
+
+    function buscarISBNLivroPorNome($searchString){
+        $apiKey = "your_key"; 
+        
+        $url = "https://www.googleapis.com/books/v1/volumes?q=" . urlencode($searchString) . "&key=" . $apiKey;
+        
+        $response = file_get_contents($url);
+        $data = json_decode($response, true);
+
+        if ($data['totalItems'] > 0) {
+            $isbn = $data['items'][0]['volumeInfo']['industryIdentifiers'][0]['identifier'];
+
+            return $isbn;
+        } else {
+            return null;
+        }
+    }
 ?>
