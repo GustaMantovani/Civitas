@@ -94,17 +94,25 @@
                     }else{
                         $mediaAval = "";
                     }
+                    
                     if($idTipo==1){
                         $isbn = buscarISBNLivroPorNome($nome);
                         if(isset($isbn)){
                             $link = "../visao/google_books_view.php?isbn=$isbn&&idproduto=$idproduto";
                         }else{
-                            
+                            $link = "data:image/jpeg;base64,$capa";
+                        }
+                    }else if ($idTipo==2){ 
+                        $linkTrailer = buscarTrailerFilmePorNome($nome);
+                        if(isset($linkTrailer)){
+                            $link = $linkTrailer;
+                        }else{
+                            $link = "data:image/jpeg;base64,$capa";
                         }
                     }else{
                         $link = "data:image/jpeg;base64,$capa";
                     }
-                    
+
                     echo "<div id='conteudo'>
                     <div id='apresentacao'>
                         <div id='divCapa'> 

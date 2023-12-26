@@ -261,9 +261,9 @@
 
     function buscarISBNLivroPorNome($searchString){
         $apiKey = "your_key"; 
-        
+
         $url = "https://www.googleapis.com/books/v1/volumes?q=" . urlencode($searchString) . "&key=" . $apiKey;
-        
+
         $response = file_get_contents($url);
         $data = json_decode($response, true);
 
@@ -272,6 +272,43 @@
 
             return $isbn;
         } else {
+            return null;
+        }
+    }
+
+    function buscarTrailerFilmePorNome($name){
+        $apiKey = 'your_key'; 
+        $name = urlencode($name); 
+        $apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=$apiKey&query=$name";
+        $response = file_get_contents($apiUrl);
+        $data = json_decode($response, true);
+        if(isset($data['results'])){
+            $video_id = $data['results'][0]['id'];
+            $details_url = "https://api.themoviedb.org/3/movie/$video_id/videos?api_key=e37e1a6ae23133c45ca60758f1cfedbd&append_to_response=videos";
+            $response = file_get_contents($details_url);
+            $data = json_decode($response,true);
+            if(isset($data['results'])){
+
+                //obter o indice do primeiro resultado que tenha a key para um trailer
+                $resultados = $data["results"];
+                $indice_trailer = null;
+                foreach ($resultados as $indice => $resultado) {
+                    if ($resultado["type"] === "Trailer") {
+                        $indice_trailer = $indice;
+                        break; 
+                    }
+                }
+                if(isset($indice_trailer)){
+                    $youtubeKey = $data['results'][$indice_trailer]['key'];
+                    $link = "https://www.youtube.com/watch?v=" . $youtubeKey;
+                    return $link;
+                }else{
+                    return null;
+                }
+            }else{
+                return null;
+            }
+        }else{
             return null;
         }
     }
