@@ -260,7 +260,7 @@
 
 
     function buscarISBNLivroPorNome($searchString){
-        $apiKey = "your_key"; 
+        $apiKey = getenv('GOOGLE_BOOKS_API_KEY'); 
 
         $url = "https://www.googleapis.com/books/v1/volumes?q=" . urlencode($searchString) . "&key=" . $apiKey;
 
@@ -277,7 +277,7 @@
     }
 
     function buscarTrailerFilmePorNome($name){
-        $apiKey = 'your_key'; 
+        $apiKey = getenv('TMDB_API_KEY'); 
         $name = urlencode($name); 
         $apiUrl = "https://api.themoviedb.org/3/search/movie?api_key=$apiKey&query=$name";
         $response = file_get_contents($apiUrl);
