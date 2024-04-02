@@ -9,7 +9,7 @@ services:
       context: .
     hostname: civitas
     ports:
-      - 8080:80
+      - 8000:80
     volumes:
       - ./src/:/var/www/html/
     environment:
@@ -27,6 +27,16 @@ services:
       - MYSQL_ROOT_PASSWORD=rpsswd
     volumes:
       - ./data-models/civitasData.sql:/docker-entrypoint-initdb.d/civitasData.sql
+  
+  phpmyadmin:
+    image: phpmyadmin
+    depends_on:
+      - mariadb
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
 
 networks:
   default:
