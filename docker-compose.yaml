@@ -3,19 +3,19 @@ version: '3.5'
 services:
 
   civitas:
+    depends_on:
+      - mariadb
     build: 
       context: .
     hostname: civitas
     ports:
       - 8080:80
     volumes:
-      - ../:/var/www/html/
-    enviroment:
-      - TMDB_API_KEY=your_key
-      - GOOGLE_BOOKS_API_KEY=your_key
+      - ./src/:/var/www/html/
+    environment:
+      - TMDB_API_KEY=key
+      - GOOGLE_BOOKS_API_KEY=key
       - MYSQL_ROOT_PASSWORD=rpsswd
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=upsswd
       - DB_NAME=civitas
   
   mariadb:
@@ -25,8 +25,8 @@ services:
       - 6000:3306
     environment:
       - MYSQL_ROOT_PASSWORD=rpsswd
-      - MYSQL_USER=user
-      - MYSQL_PASSWORD=upsswd
+    volumes:
+      - ./data-models/civitasData.sql:/docker-entrypoint-initdb.d/civitasData.sql
 
 networks:
   default:

@@ -1,6 +1,6 @@
 <?php
     function pesquisarPublicacaoPorIDProduto ($conexao, $id){
-        $sql = "SELECT * FROM publicacao WHERE produtoCultural_idproduto = $id"
+        $sql = "SELECT * FROM publicacao WHERE produtocultural_idproduto = $id"
         ." ORDER BY idpublicacao DESC";
                         
         $resultado = mysqli_query($conexao,$sql ) or die ( mysqli_error($conexao) );
@@ -9,7 +9,7 @@
 
     function cadPublicacao ($conexao, $dataPubli, $temaPubli, $comentario, $avaliacao, $idproduto, $idLogado){
         $sql = "INSERT INTO publicacao "
-            . "(dataPublicacao, produtoCultural_idproduto, Usuario_idusuario, tema, comentario, avaliacao) VALUES "
+            . "(dataPublicacao, produtocultural_idproduto, Usuario_idusuario, tema, comentario, avaliacao) VALUES "
             . "('$dataPubli', '$idproduto', '$idLogado', '$temaPubli', '$comentario', '$avaliacao')";
 
             $sql = $sql . "ORDER BY idpublicacao";
@@ -23,7 +23,7 @@
     }
 
     function excluirPubliPorIDProduto ($conexao, $idProduto){
-        $delete = "DELETE FROM publicacao WHERE produtoCultural_idproduto = $idProduto";
+        $delete = "DELETE FROM publicacao WHERE produtocultural_idproduto = $idProduto";
         mysqli_query($conexao,$delete ) or die ( mysqli_error($conexao) );
     }
 

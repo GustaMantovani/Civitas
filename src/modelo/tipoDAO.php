@@ -1,7 +1,7 @@
 <?php
 
 function comboTipo($conexao, $tipoMarcado){ //Função de acesso à tabela 'tipo'
-    $selectTipo = "SELECT * FROM tipoProduto";
+    $selectTipo = "SELECT * FROM tipoproduto";
 
     
     $acesso = mysqli_query($conexao, $selectTipo) or die (mysqli_error($conexao));
@@ -25,7 +25,7 @@ function comboTipo($conexao, $tipoMarcado){ //Função de acesso à tabela 'tipo
 }
 
 function exibirTipo ($conexao, $tipoMarcado){
-    $selectTipo = "SELECT * FROM tipoProduto";
+    $selectTipo = "SELECT * FROM tipoproduto";
 
     
     $acesso = mysqli_query($conexao, $selectTipo) or die (mysqli_error($conexao));
@@ -47,7 +47,7 @@ function exibirTipo ($conexao, $tipoMarcado){
 }
 
 function pesquisarTipoPorID ($conexao, $idTipo){
-    $sql = "SELECT * FROM tipoProduto WHERE idtipoProduto = $idTipo";
+    $sql = "SELECT * FROM tipoproduto WHERE idtipoProduto = $idTipo";
                         
     $resultado = mysqli_query($conexao,$sql) or die ( mysqli_error($conexao) );
     return $resultado;

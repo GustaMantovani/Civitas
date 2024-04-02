@@ -1,7 +1,7 @@
 <?php
     function inserirLista ($conexao, $idUsr, $idLivro){
         $sql = "INSERT INTO interesse "
-        . "(Usuario_idusuario, livro_produtoCultural_idproduto) VALUES "
+        . "(Usuario_idusuario, livro_produtocultural_idproduto) VALUES "
         . "('$idUsr', '$idLivro')";
 
         mysqli_query($conexao,$sql) or die ( mysqli_error($conexao) );
@@ -15,7 +15,7 @@
         while ($registro = mysqli_fetch_assoc($acesso)){
 
     
-            $idTabela = $registro["livro_produtoCultural_idproduto"];
+            $idTabela = $registro["livro_produtocultural_idproduto"];
             $idDoadorTabela = $registro["Usuario_idusuario"];
 
             if ($idLista == $idTabela && $idUsr == $idDoadorTabela){
@@ -26,13 +26,13 @@
     }
 
     function excluirProdutoInteresse ($conexao, $id){
-        $deleteProduto = "DELETE FROM interesse WHERE livro_produtoCultural_idproduto = $id";
+        $deleteProduto = "DELETE FROM interesse WHERE livro_produtocultural_idproduto = $id";
         mysqli_query($conexao,$deleteProduto ) or die ( mysqli_error($conexao) );
     }
 
 
     function exibirInteressesPorIdObra ($conexao, $idLivro){
-        $sql = "SELECT * FROM interesse WHERE $idLivro = livro_produtoCultural_idproduto";
+        $sql = "SELECT * FROM interesse WHERE $idLivro = livro_produtocultural_idproduto";
         $acesso = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
         return $acesso;
     }
@@ -54,7 +54,7 @@
     }
 
     function pesquisaInteresse ($conexao, $idUsr, $idLivro){
-        $sql = "SELECT * FROM interesse WHERE $idUsr = Usuario_idusuario AND $idLivro = livro_produtoCultural_idproduto";
+        $sql = "SELECT * FROM interesse WHERE $idUsr = Usuario_idusuario AND $idLivro = livro_produtocultural_idproduto";
         $acesso = mysqli_query($conexao, $sql) or die (mysqli_error($conexao));
         
         return $acesso;     
