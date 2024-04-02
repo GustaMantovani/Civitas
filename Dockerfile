@@ -1,5 +1,8 @@
 FROM ubuntu:23.10
 
+ARG timezone 
+ENV TIMEZONE=${timezone:-"America/Sao_Paulo"} 
+
 RUN apt update && apt install -y supervisor apache2 htop nano net-tools php libapache2-mod-php php-mysql
 
 COPY config/dir.conf /etc/apache2/mods-enabled/dir.conf 
