@@ -15,8 +15,10 @@ services:
     environment:
       - TMDB_API_KEY=key
       - GOOGLE_BOOKS_API_KEY=key
+      - MYSQL_USER=root
       - MYSQL_ROOT_PASSWORD=rpsswd
       - DB_NAME=civitas
+      - DB_HOSTNAME=db
   
   mariadb:
     image: mariadb:latest
@@ -32,7 +34,6 @@ services:
     image: phpmyadmin
     depends_on:
       - mariadb
-    restart: always
     ports:
       - 8080:80
     environment:

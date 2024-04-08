@@ -2,8 +2,8 @@
 //Conexão com o banco de dados
 function conectarBD(){
     // Dados de conexão com o banco de dados
-    $servername = 'db'; // Endereço do servidor do banco de dados
-    $username = 'root'; // Nome de usuário do banco de dados
+    $servername = getenv('DB_HOSTNAME'); // Endereço do servidor do banco de dados
+    $username = getenv('MYSQL_USER'); // Nome de usuário do banco de dados
     $password = getenv('MYSQL_ROOT_PASSWORD');   // Senha do banco de dados
     $dbname = getenv('DB_NAME'); // Nome do banco de dados que você deseja conectar
     // Estabelecer a conexão com o banco de dados
