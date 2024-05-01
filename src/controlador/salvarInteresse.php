@@ -1,28 +1,27 @@
 <?php
-    require_once '../controlador/validar.php';
-    require_once "../modelo/conexaoBD.php";
-    require_once "../modelo/interesseDAO.php";
-    require_once "../controlador/trocaLivro.php";
+require_once '../controlador/validar.php';
+require_once "../modelo/conexaoBD.php";
+require_once "../modelo/interesseDAO.php";
+require_once "../controlador/trocaLivro.php";
 
-    $lista = $_SESSION["lista"];
+$lista = $_SESSION["lista"];
 
-    $conexao = conectarBD();
+$conexao = conectarBD();
 
-    foreach ( $lista as $idLivro => $livro ) {
+foreach ($lista as $idLivro => $livro) {
 
-        $resultado = verificaIdTabela($conexao, $idLivro, $idLogado);
+  $resultado = verificaIdTabela($conexao, $idLivro, $idLogado);
 
-        if($resultado){
-            inserirLista ($conexao, $idLogado, $idLivro);
-        } 
-        removerLista($idLivro);
+  if ($resultado) {
+    inserirLista($conexao, $idLogado, $idLivro);
+  }
+  removerLista($idLivro);
+}
 
-    }
+if (isset($_POST["idproduto"])) {
+  $idproduto = $_POST["idproduto"];
+  header("Location:../visao/publicacao.php?idproduto=$idproduto");
+} else {
+  header("Location:../visao/explorar.php");
+}
 
-    if(isset($_POST["idproduto"])){
-        $idproduto = $_POST["idproduto"];
-        header("Location:../visao/publicacao.php?idproduto=$idproduto");
-    }else{
-        header("Location:../visao/explorar.php");
-    }
-?>

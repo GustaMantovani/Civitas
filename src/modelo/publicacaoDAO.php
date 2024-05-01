@@ -1,48 +1,53 @@
 <?php
-    function pesquisarPublicacaoPorIDProduto ($conexao, $id){
-        $sql = "SELECT * FROM publicacao WHERE produtocultural_idproduto = $id"
-        ." ORDER BY idpublicacao DESC";
-                        
-        $resultado = mysqli_query($conexao,$sql ) or die ( mysqli_error($conexao) );
-        return $resultado;
-    }
+function pesquisarPublicacaoPorIDProduto($conexao, $id)
+{
+  $sql = "SELECT * FROM publicacao WHERE produtocultural_idproduto = $id"
+    . " ORDER BY idpublicacao DESC";
 
-    function cadPublicacao ($conexao, $dataPubli, $temaPubli, $comentario, $avaliacao, $idproduto, $idLogado){
-        $sql = "INSERT INTO publicacao "
-            . "(dataPublicacao, produtocultural_idproduto, Usuario_idusuario, tema, comentario, avaliacao) VALUES "
-            . "('$dataPubli', '$idproduto', '$idLogado', '$temaPubli', '$comentario', '$avaliacao')";
+  $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+  return $resultado;
+}
 
-            $sql = $sql . "ORDER BY idpublicacao";
+function cadPublicacao($conexao, $dataPubli, $temaPubli, $comentario, $avaliacao, $idproduto, $idLogado)
+{
+  $sql = "INSERT INTO publicacao "
+    . "(dataPublicacao, produtocultural_idproduto, Usuario_idusuario, tema, comentario, avaliacao) VALUES "
+    . "('$dataPubli', '$idproduto', '$idLogado', '$temaPubli', '$comentario', '$avaliacao')";
 
-        mysqli_query($conexao,$sql) or die ( mysqli_error($conexao) );
-    
-        $resposta = ("Publicação cadastrada.");
-        
-    
-        return $resposta; 
-    }
+  $sql = $sql . "ORDER BY idpublicacao";
 
-    function excluirPubliPorIDProduto ($conexao, $idProduto){
-        $delete = "DELETE FROM publicacao WHERE produtocultural_idproduto = $idProduto";
-        mysqli_query($conexao,$delete ) or die ( mysqli_error($conexao) );
-    }
+  mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
 
-    function excluirPubliPorIDUsr ($conexao, $idUsr){
-        $delete = "DELETE FROM publicacao WHERE Usuario_idusuario = $idUsr";
-        mysqli_query($conexao,$delete ) or die ( mysqli_error($conexao) );
-    }
+  $resposta = ("Publicação cadastrada.");
 
-    function excluirPubli($conexao, $id){
-        $delete = "DELETE FROM publicacao WHERE idpublicacao = $id";
-        mysqli_query($conexao,$delete ) or die ( mysqli_error($conexao) );
-    }
 
-    function pesquisarPublicacaoPorIDUsr($conexao, $idUsr){
-        $sql = "SELECT * FROM publicacao WHERE Usuario_idusuario = $idUsr"
-        ." ORDER BY idpublicacao DESC";
-                        
-        $resultado = mysqli_query($conexao,$sql ) or die ( mysqli_error($conexao) );
-        return $resultado;
-    }
+  return $resposta;
+}
 
-?>
+function excluirPubliPorIDProduto($conexao, $idProduto)
+{
+  $delete = "DELETE FROM publicacao WHERE produtocultural_idproduto = $idProduto";
+  mysqli_query($conexao, $delete) or die(mysqli_error($conexao));
+}
+
+function excluirPubliPorIDUsr($conexao, $idUsr)
+{
+  $delete = "DELETE FROM publicacao WHERE Usuario_idusuario = $idUsr";
+  mysqli_query($conexao, $delete) or die(mysqli_error($conexao));
+}
+
+function excluirPubli($conexao, $id)
+{
+  $delete = "DELETE FROM publicacao WHERE idpublicacao = $id";
+  mysqli_query($conexao, $delete) or die(mysqli_error($conexao));
+}
+
+function pesquisarPublicacaoPorIDUsr($conexao, $idUsr)
+{
+  $sql = "SELECT * FROM publicacao WHERE Usuario_idusuario = $idUsr"
+    . " ORDER BY idpublicacao DESC";
+
+  $resultado = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
+  return $resultado;
+}
+

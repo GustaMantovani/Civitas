@@ -1,17 +1,18 @@
 <?php
-    function sessionUpdate($conexao){
-        session_start();
-        $id = $_SESSION["idSessao"];
+function sessionUpdate($conexao)
+{
+  session_start();
+  $id = $_SESSION["idSessao"];
 
-        $usr = pesquisarUsrporID ($conexao, $id);
-        $registro = mysqli_fetch_assoc($usr);
-        
-        $usuario = $registro["usuario"];
+  $usr = pesquisarUsrporID($conexao, $id);
+  $registro = mysqli_fetch_assoc($usr);
 
-        $bytes = $registro["imgPerfil"];
-        $imgPerfil = base64_encode($bytes);
+  $usuario = $registro["usuario"];
 
-        $_SESSION["imgSessao"] = $imgPerfil;
-        $_SESSION["usrSessao"] = $usuario;
-    }
-?>
+  $bytes = $registro["imgPerfil"];
+  $imgPerfil = base64_encode($bytes);
+
+  $_SESSION["imgSessao"] = $imgPerfil;
+  $_SESSION["usrSessao"] = $usuario;
+}
+
