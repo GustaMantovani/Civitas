@@ -31,7 +31,7 @@ services:
       - ./data-models/civitasData.sql:/docker-entrypoint-initdb.d/civitasData.sql
   
   phpmyadmin:
-    image: phpmyadmin
+    image: phpmyadmin:fpm-alpine
     depends_on:
       - mariadb
     ports:
