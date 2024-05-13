@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
 
@@ -31,7 +31,7 @@ services:
       - ./data-models/civitasData.sql:/docker-entrypoint-initdb.d/civitasData.sql
   
   phpmyadmin:
-    image: phpmyadmin:fpm-alpine
+    image: phpmyadmin:latest
     depends_on:
       - mariadb
     ports:
