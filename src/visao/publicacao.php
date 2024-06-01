@@ -100,14 +100,14 @@ require_once '../controlador/validar.php';
           } else {
             $link = "data:image/jpeg;base64,$capa";
           }
-        } else if ($idTipo == 2) {
+        } /*else if ($idTipo == 2) {
           $linkTrailer = buscarTrailerFilmePorNome($nome);
           if (isset($linkTrailer)) {
             $link = $linkTrailer;
           } else {
             $link = "data:image/jpeg;base64,$capa";
           }
-        } else {
+        }*/ else {
           $link = "data:image/jpeg;base64,$capa";
         }
 

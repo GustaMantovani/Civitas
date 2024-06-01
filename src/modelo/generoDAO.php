@@ -8,7 +8,7 @@ function comboGenero($conexao, $generoMarcado)
 
   $resposta = null;
   while ($registro = mysqli_fetch_assoc($acesso)) { //Acessa cada linha da tabela
-    $idGenero  = $registro["idgeneroproduto"];
+    $idGenero  = $registro["idgeneroProduto"];
     $genero  = $registro["genero"];
 
     if ($idGenero == $generoMarcado) {
